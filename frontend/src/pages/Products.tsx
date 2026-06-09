@@ -71,7 +71,7 @@ export default function Products() {
     }
   };
 
-  const handleDelete = async (id: int) => {
+  const handleDelete = async (id: number) => {
     if (confirm('Are you sure you want to delete this product?')) {
       try {
         await api.delete(`/products/${id}`);

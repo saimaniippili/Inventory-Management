@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { Outlet, Link, useLocation, useNavigate } from 'react-router-dom';
 import { useStore } from '../store/store';
-import { LayoutDashboard, Package, Users, ShoppingCart, Settings, Menu, Bell, Search, User } from 'lucide-react';
+import { LayoutDashboard, Package, Users, ShoppingCart, Menu, Search } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const navItems = [

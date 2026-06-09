@@ -85,7 +85,7 @@ export default function Customers() {
     }
   };
 
-  const handleDelete = async (id: int) => {
+  const handleDelete = async (id: number) => {
     if (confirm('Are you sure you want to delete this customer?')) {
       try {
         await api.delete(`/customers/${id}`);
