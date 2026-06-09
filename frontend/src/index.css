@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-background text-black antialiased selection:bg-black selection:text-white font-bold;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-card border-4 border-black;
+  }
+  
+  .glass-card {
+    @apply bg-card border-4 border-black rounded-none p-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)];
+  }
+  
+  .glass-panel {
+    @apply bg-card border-4 border-black rounded-none shadow-[8px_8px_0px_0px_rgba(0,0,0,1)];
+  }
+  
+  .input-glass {
+    @apply bg-white border-4 border-black rounded-none px-4 py-2 focus:outline-none focus:ring-0 focus:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all text-black w-full placeholder-gray-500 font-bold;
+  }
+  
+  .btn-primary {
+    @apply bg-black hover:bg-gray-800 text-white font-black py-2 px-4 rounded-none border-4 border-black transition-all shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[0px_0px_0px_0px_rgba(0,0,0,1)] hover:translate-y-[4px] hover:translate-x-[4px];
+  }
+  
+  .btn-secondary {
+    @apply bg-white hover:bg-gray-100 text-black font-black py-2 px-4 rounded-none border-4 border-black transition-all shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[0px_0px_0px_0px_rgba(0,0,0,1)] hover:translate-y-[4px] hover:translate-x-[4px];
+  }
+  
+  .btn-danger {
+    @apply bg-white hover:bg-red-50 text-red-600 font-black py-2 px-4 rounded-none border-4 border-black transition-all shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[0px_0px_0px_0px_rgba(0,0,0,1)] hover:translate-y-[4px] hover:translate-x-[4px];
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.2);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.1);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255,255,255,0.2);
+}
