@@ -73,7 +73,14 @@ export default function Dashboard() {
         
         // Ensure some dummy data if empty
         if (data.length === 0) {
-          data.push({ name: 'Today', revenue: 0 });
+          const today = new Date().toLocaleDateString(undefined, { month: 'short', day: 'numeric' });
+          data.push({ name: today, revenue: 0 });
+        }
+        
+        // If there's only 1 point, Recharts won't draw a line. Add a dummy previous day.
+        if (data.length === 1) {
+          const prevDateStr = "Previous";
+          data.unshift({ name: prevDateStr, revenue: 0 });
         }
         setChartData(data);
 

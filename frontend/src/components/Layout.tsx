@@ -103,12 +103,12 @@ export default function Layout() {
               
               {/* Global Search Dropdown */}
               {isSearchOpen && searchQuery && (
-                <div className="absolute top-12 left-0 w-80 bg-[#1A1A27] rounded-xl p-2 z-50 flex flex-col gap-1 border border-black shadow-[0_10px_40px_rgba(0,0,0,0.8)]">
+                <div className="absolute top-12 left-0 w-80 bg-white rounded-none p-2 z-50 flex flex-col gap-1 border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
                   {searchResults.length > 0 ? (
                     searchResults.map((result, idx) => (
                       <button
                         key={idx}
-                        className="flex flex-col text-left px-3 py-2 hover:bg-black/10 rounded-lg transition-colors"
+                        className="flex flex-col text-left px-3 py-2 hover:bg-black/5 rounded-none transition-colors border-b border-black/10 last:border-0"
                         onClick={() => {
                           navigate(result.path);
                           setIsSearchOpen(false);
