@@ -1,30 +1,56 @@
-# Modern Inventory Management System
+# Inventory & Order Management System
 
-A full-stack, real-time inventory and order management system built for high performance and beautiful UI. 
+A comprehensive, full-stack inventory and order management application built to handle products, customers, and dynamic inventory tracking. The application features a Neo-Brutalist user interface and a robust backend API.
 
-## 🚀 Features
-* **Dashboard:** Real-time metrics, low stock alerts, and revenue charts.
-* **Product Management:** Add, edit, delete, and track stock levels with unique SKUs.
-* **Customer Management:** Keep track of customer details with strict email and phone validation.
-* **Order Processing:** Create orders, automatically deduct stock, and track delivery status.
-* **Security & Rules:** Prevents negative stock, duplicate SKUs, and duplicate emails.
+## Technology Stack
 
-## 💻 Tech Stack
-* **Frontend:** React, TypeScript, Vite, TailwindCSS (Dark/Glassmorphism theme)
-* **Backend:** Python, FastAPI, SQLAlchemy
-* **Database:** PostgreSQL
-* **Infrastructure:** Docker & Docker Compose
+![React](https://img.shields.io/badge/React-000000?style=for-the-badge&logo=react&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-000000?style=for-the-badge&logo=typescript&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-000000?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-000000?style=for-the-badge&logo=vite&logoColor=white)
 
-## 🛠️ How to Run (One-Command Setup)
-This project is fully containerized. You do not need to install Python, Node, or PostgreSQL on your computer. You only need Docker!
+![Python](https://img.shields.io/badge/Python-000000?style=for-the-badge&logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-000000?style=for-the-badge&logo=fastapi&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-000000?style=for-the-badge&logo=postgresql&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-000000?style=for-the-badge&logo=docker&logoColor=white)
 
-1. Make sure **Docker Desktop** is open and running.
-2. Open a terminal in this project folder.
-3. Run the following command:
-```bash
-docker-compose up --build -d
-```
-4. Wait about 30 seconds for the containers to start.
-5. Open your web browser and go to: **[http://localhost:5173](http://localhost:5173)**
+## Features
 
-*To stop the system, run:* `docker-compose down`
+- Product Management: Add, edit, delete, and search products with unique SKUs and automatic stock tracking.
+- Customer Management: Manage customer profiles with unique email validation.
+- Order Management: Create multi-item orders that automatically deduct from product inventory. Validation prevents ordering items with insufficient stock.
+- Analytics Dashboard: View revenue over time, low-stock warnings, and top-level business metrics.
+- Export Capabilities: Download order data locally via CSV export.
+
+## Application Architecture
+
+The project is structured as a decoupled full-stack application:
+- `/frontend`: A React/Vite Single Page Application (SPA) styled with Tailwind CSS in a Neo-Brutalist design language.
+- `/backend`: A FastAPI REST service utilizing SQLAlchemy for ORM-based interactions with a PostgreSQL database.
+
+## Local Development Setup
+
+### Prerequisites
+- Docker and Docker Compose installed.
+
+### Instructions
+
+1. Clone the repository.
+2. Copy the `.env.example` file to `.env` in the root directory.
+3. Start the application stack using Docker Compose:
+   ```bash
+   docker-compose up --build
+   ```
+4. Access the applications:
+   - Frontend: http://localhost:5173
+   - Backend API Docs: http://localhost:8000/docs
+   - Database: localhost:5432
+
+## Environment Variables
+
+Configuration is managed securely via environment variables.
+
+- `DATABASE_URL`: Connection string for PostgreSQL.
+- `POSTGRES_USER`: Database user.
+- `POSTGRES_PASSWORD`: Database password.
+- `POSTGRES_DB`: Database name.
