@@ -126,16 +126,8 @@ export default function Layout() {
               )}
             </div>
           </div>
-          
-          <div className="flex items-center gap-4">
-            <button className="p-2 rounded-lg hover:bg-black/5 text-gray-700 font-bold hover:text-black font-bold transition-colors relative">
-              <Bell size={20} />
-              <span className="absolute top-2 right-2 w-2 h-2 bg-accent rounded-full border border-background"></span>
-            </button>
-            <div className="w-9 h-9 rounded-full bg-secondary flex items-center justify-center cursor-pointer shadow-sm border border-border">
-              <User size={18} className="text-black font-bold" />
-            </div>
-          </div>
+          {/* Empty right section to maintain flex layout if needed, or just removed */}
+          <div></div>
         </header>
 
         {/* Page Content */}

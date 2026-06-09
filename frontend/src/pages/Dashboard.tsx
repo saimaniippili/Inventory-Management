@@ -188,10 +188,10 @@ export default function Dashboard() {
                     <td className="py-4 text-gray-900 font-bold">{o.customer_name}</td>
                     <td className="py-4 text-gray-900 font-bold">₹{o.total_amount.toFixed(2)}</td>
                     <td className="py-4">
-                      <span className={`px-3 py-1 rounded-full text-xs font-medium border ${
-                          o.status === 'Delivered' ? 'bg-success/10 text-success border-success/20' : 
-                          o.status === 'Processing' ? 'bg-accent/10 text-accent border-accent/20' :
-                          'bg-zinc-800 text-black font-bold border-zinc-700'
+                      <span className={`px-3 py-1 rounded-none text-xs font-black border-2 border-black ${
+                          o.status === 'Delivered' ? 'bg-[#10B981] text-black' : 
+                          o.status === 'Processing' ? 'bg-[#06B6D4] text-black' :
+                          'bg-[#FBBF24] text-black'
                         }`}>
                         {o.status}
                       </span>
